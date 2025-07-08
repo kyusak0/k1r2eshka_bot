@@ -25,7 +25,7 @@ def buttons(message):
     elif (message.text == "Комплимент"):
         bot.send_message(message.chat.id, text=f"{random.choice(compliments)}")
     else:
-        bot.send_message(message.chat.id, text="Пока что я могу отвечать только на команды с кнопок")
+        bot.send_message(message.chat.id, text="Пока что, я могу отвечать только на команды с кнопок")
 
 
 @bot.message_handler(content_types=['img'])
