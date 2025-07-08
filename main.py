@@ -28,7 +28,7 @@ def buttons(message):
         bot.send_message(message.chat.id, text="Пока что я могу отвечать только на команды с кнопок")
 
 
-@bot.message_handler(content_types=['image'])
+@bot.message_handler(content_types=['img'])
 def buttons(message):
     bot.send_message(message.chat.id, text="Выглядит интересно... Что это?")
 
