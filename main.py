@@ -9,7 +9,6 @@ token = secrets.get('BOT_API_TOKEN')
 bot = telebot.TeleBot(token)
 
 
-
 @bot.message_handler(commands=['start'])
 def start_message(message):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -17,6 +16,7 @@ def start_message(message):
     action_button = types.KeyboardButton("Комплимент")
     markup.add(start_button, action_button)
     bot.send_message(message.chat.id, text="Привет, {0.first_name} \nВоспользуйся кнопками".format(message.from_user), reply_markup=markup)
+
 
 @bot.message_handler(content_types=['text'])
 def buttons(message):
